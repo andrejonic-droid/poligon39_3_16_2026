@@ -8,5 +8,19 @@ namespace poligon39_3_16_2026
 {
     class Ravna
     {
+        public static int SIS(Vektor a, Tacka B, Tacka C)
+        {
+            // 0 sa iste strane
+            // -1 sa raznih strana
+            // 1 kolinearna bar jedna sa a
+            Vektor PB = new Vektor(a.pocetak, B);
+            Vektor PC = new Vektor(a.pocetak, C);
+            double PKPB = Vektor.VP(a, PB);
+            double PKPC = Vektor.VP(a, PC);
+            if (PKPB * PKPC > 0) return 0;
+            if (PKPB * PKPC < 0) return -1;
+            return 1;
+        }
+        
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace poligon39_3_16_2026
 {
-    class Vektor
+    internal class Vektor
     {
-        Tacka pocetak, kraj;
+        public Tacka pocetak, kraj;
         public Vektor(Tacka A, Tacka B)
         {
             pocetak = A;
@@ -16,17 +16,16 @@ namespace poligon39_3_16_2026
         }
         public Tacka Centriraj()
         {
-            Tacka Nova = new Tacka(kraj.x-pocetak.x,kraj.y-pocetak.y);
+            Tacka Nova = new Tacka(kraj.x - pocetak.x, kraj.y - pocetak.y);
             return Nova;
         }
-        public static double SP(Vektor a,Vektor b)
+        public static double SP(Vektor a, Vektor b)
         {
             Tacka aC = a.Centriraj();
             Tacka bC = b.Centriraj();
-
             return aC.x * bC.x + aC.y * bC.y;
         }
-        public double VP(Vektor a, Vektor b)
+        public static double VP(Vektor a, Vektor b)
         {
             Tacka aC = a.Centriraj();
             Tacka bC = b.Centriraj();
