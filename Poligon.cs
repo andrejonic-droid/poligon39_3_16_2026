@@ -35,7 +35,7 @@ namespace poligon39_3_16_2026
             Console.WriteLine("Poligon ima {0} temena", broj_temena);
             for (int i=0; i < broj_temena; i++)
             {
-                Console.WriteLine("Koordinate {0}. su x={1} i y={2}", i,teme[i].x, teme[i].x);
+                Console.WriteLine("Koordinate {0}. su x={1} i y={2}", i+1,teme[i].x, teme[i].x);
             }
         }
         public void snimi()
