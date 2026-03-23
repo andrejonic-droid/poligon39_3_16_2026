@@ -35,6 +35,8 @@ namespace poligon39_3_16_2026
             Console.WriteLine(Ravna.SIS(a, A, B));
             Console.Read();*/
             Poligon prvi = Poligon.unos();
+            prvi.stampa();
+            Console.ReadLine();
             prvi.snimi();
 
         }
