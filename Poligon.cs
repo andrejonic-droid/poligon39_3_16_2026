@@ -51,7 +51,17 @@ namespace poligon39_3_16_2026
         }
         public static Poligon ucitaj()
         {
-            return null;
+
+            StreamReader ulaz = new StreamReader("poligon.txt");
+            int n = Convert.ToInt32(ulaz.ReadLine());
+            Poligon novi = new Poligon(n);
+            for (int i = 0; i < n; i++)
+            {
+                novi.teme[i] = new Tacka();
+                novi.teme[i].x = Convert.ToDouble(ulaz.ReadLine());
+                novi.teme[i].y = Convert.ToDouble(ulaz.ReadLine());
+            }
+                return novi;
         }
     }
 }
