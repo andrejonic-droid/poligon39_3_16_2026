@@ -34,12 +34,13 @@ namespace poligon39_3_16_2026
             Vektor a = new Vektor(prva, druga);
             Console.WriteLine(Ravna.SIS(a, A, B));
             Console.Read();*/
-            Poligon prvi = Poligon.ucitaj();
-
-            prvi.stampa();
-            
+            Poligon prvi = Poligon.unos();
             //prvi.snimi();
 
+            prvi.stampa();
+            Console.WriteLine("obim= {0}",prvi.Obim());
+            //prvi.snimi();
+            Console.Read();
         }
     }
 }
