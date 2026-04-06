@@ -35,12 +35,11 @@ namespace poligon39_3_16_2026
             Console.WriteLine(Ravna.SIS(a, A, B));
             Console.Read();*/
             Poligon prvi = Poligon.unos();
-            //prvi.snimi();
+            
 
-            prvi.stampa();
-            Console.WriteLine("obim= {0}",prvi.Obim());
-            //prvi.snimi();
-            Console.Read();
+          
+            Console.WriteLine("konveksan={0}", prvi.konveksan());
+            Console.WriteLine("povrsina={0}", prvi.povrsina());
         }
     }
 }

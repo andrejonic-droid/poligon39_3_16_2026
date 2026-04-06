@@ -37,6 +37,14 @@ namespace poligon39_3_16_2026
             double duzina = A.d();
             return duzina;
         }
+        public static bool seku_se(Vektor a, Vektor b)
+        {
+            int a_b = Ravna.SIS(a, b.pocetak, b.kraj);
+            int b_a = Ravna.SIS(b, a.pocetak, a.kraj);
+            if ((a_b != 0) && (b_a != 0)) return true;
+            return false;
+        }
     }
 }
+
 
