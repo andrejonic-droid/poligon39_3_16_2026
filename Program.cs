@@ -35,11 +35,41 @@ namespace poligon39_3_16_2026
             Console.WriteLine(Ravna.SIS(a, A, B));
             Console.Read();*/
             Poligon prvi = Poligon.unos();
-            
 
           
-            Console.WriteLine("konveksan={0}", prvi.konveksan());
-            Console.WriteLine("povrsina={0}", prvi.povrsina());
+            
+                Vektor AB = new Vektor(prvi.teme[0], prvi.teme[1]);
+                Vektor BC = new Vektor(prvi.teme[1], prvi.teme[2]);
+                Vektor CD = new Vektor(prvi.teme[2], prvi.teme[3]);
+                Vektor DA = new Vektor(prvi.teme[3], prvi.teme[0]);
+
+               
+                bool uslov1d = (AB.duzina() == DA.duzina()) && (BC.duzina() == CD.duzina());
+
+             
+                bool uslov2d = (AB.duzina() == BC.duzina()) && (CD.duzina() == DA.duzina());
+            if (Vektor.SP(AB, BC) == 0 && Vektor.SP(BC, CD) == 0 && Vektor.SP(CD, DA) == 0 && Vektor.SP(DA, AB) == 0) { Console.WriteLine("Nije deltoid"); }
+            else
+            {
+                if (uslov1d || uslov2d)
+                {
+                    Console.WriteLine("Deltoid je");
+                }
+                else
+                {
+                    Console.WriteLine("Nije deltoid");
+                }
+            }
+
+            if (Vektor.SP(AB, BC) == 0 && Vektor.SP(BC, CD) == 0 && Vektor.SP(CD, DA) == 0 && Vektor.SP(DA, AB) == 0) { Console.WriteLine("Pravougaonik je"); }
+            else Console.WriteLine("Nije pravougaonik");
+            if ((Vektor.SP(AB, BC) == 0 && Vektor.SP(BC, CD) == 0) || (Vektor.SP(CD, DA) == 0 && Vektor.SP(DA, AB) == 0)) { Console.WriteLine("Trapez je"); }
+            else Console.WriteLine("Nije trapez");
+
+
+            //Console.WriteLine("konveksan={0}", prvi.konveksan());
+            //Console.WriteLine("povrsina={0}", prvi.povrsina());
+
         }
     }
 }

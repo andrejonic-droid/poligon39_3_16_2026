@@ -121,7 +121,7 @@ namespace poligon39_3_16_2026
             if ((brojac == broj_temena) || (brojac == 0)) return true;
             return false;
         }
-        public double povrsina()
+        /*public double povrsina()
         {
             double plus = 0, minus = 0;
             for (int i = 0; i < broj_temena; i++)
@@ -135,6 +135,6 @@ namespace poligon39_3_16_2026
         { 
             Tacka O = new Tacka(max.x, T.y);
             return false;
-        }
+        }*/
     }
 }
